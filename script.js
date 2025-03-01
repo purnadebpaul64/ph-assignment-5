@@ -22,8 +22,6 @@ for (let i = 0; i < buttons.length; i++) {
   };
 }
 
-// document
-//   .getElementsByClassName("card-button")
-//   .addEventListener("click", function () {
-//     alert("Button Clicked!");
-//   });
+const time = new Date().toDateString();
+console.log(time);
+document.getElementById("date-place").innerText = time;
