@@ -21,6 +21,9 @@ for (let i = 0; i < buttons.length; i++) {
     y.classList.add("opacity-40");
     let z = document.getElementById(`card-heading-${i}`);
     commentpush(z.innerText);
+    if (inttask == 0) {
+      alert("congo motha fhata");
+    }
   };
 }
 
@@ -40,3 +43,15 @@ document.getElementById("clear-history").addEventListener("click", function () {
   const comments = document.getElementById("comment");
   comments.innerHTML = ``;
 });
+
+function colorChange() {
+  let red = Math.floor(Math.random() * 256);
+  let green = Math.floor(Math.random() * 256);
+  let blue = Math.floor(Math.random() * 256);
+  let alpha = Math.random().toFixed(2); // Alpha 0.00 to 1.00
+
+  let rgba = `rgba(${red}, ${green}, ${blue}, ${alpha})`;
+  let body = document.getElementById("body");
+  body.classList.remove("bg-primary");
+  body.style.background = rgba;
+}
