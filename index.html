@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- tailwind cdn -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              accent: "#3752fd",
+              primary: "#f4f7ff",
+              secondary: "#ced6ff",
+              dark: "#00303c",
+            },
+            fontFamily: {
+              poppins: ["Poppins", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+    <!-- fontawesome -->
+    <script
+      src="https://kit.fontawesome.com/fc3ff6af56.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Document</title>
+  </head>
+  <body class="font-poppins bg-primary">
+    <!-- HEADER START -->
+    <nav class="max-w-screen-xl mx-auto my-5">
+      <div class="bg-white p-5 rounded-xl flex justify-between items-center">
+        <div class="left-section flex gap-2 items-center">
+          <img src="assets/logo.png" alt="" />
+          <h1 class="font-bold text-3xl">
+            <span class="font-light">Dev</span>Board
+          </h1>
+        </div>
+        <div class="right-section flex gap-10 items-center">
+          <div class="flex gap-3 p-3 bg-primary rounded-3xl">
+            <img src="assets/checkbox.png" alt="" />
+            <h3 id="completed-task" class="text-2xl font-bold"></h3>
+          </div>
+          <div class="p-2 bg-primary rounded-full">
+            <img src="assets/theme-btn.png" alt="" />
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- HEADER END -->
+
+    <!-- MAIN BODY START -->
+    <section
+      class="main-body grid grid-cols-8 max-w-screen-xl mx-auto gap-x-4 mb-8"
+    >
+      <!-- LEFT SIDE START -->
+      <div class="main-body-left bg-white rounded-xl col-span-6 p-4">
+        <!-- FIRST ROW START-->
+        <div class="grid grid-cols-8 gap-4">
+          <div class="bg-primary col-span-2 p-6 flex gap-3 rounded-xl">
+            <div class="p-3 bg-white rounded-full">
+              <img src="assets/checkbox.png" alt="" />
+            </div>
+            <div>
+              <p class="text-sm">Task Assigned</p>
+              <h3 class="text-2xl font-bold">
+                0<span id="task-assigned" class="text-2xl font-bold"></span>
+              </h3>
+            </div>
+          </div>
+          <div
+            class="bg-gradient-to-br from-[#3752FD] from-0% via-[#6C7FFA] via-53% to-[#9BA8F8] to-100% col-span-4 px-10 flex gap-3 rounded-xl items-center"
+          >
+            <img class="size-16" src="assets/board.png" alt="" />
+            <h3 class="text-xl text-white">
+              Discover Something<br />
+              New Today!
+            </h3>
+          </div>
+
+          <div class="bg-primary col-span-2 p-6 flex gap-3 rounded-xl">
+            <div class="p-3 bg-white rounded-full">
+              <img src="assets/checkbox.png" alt="" />
+            </div>
+            <div>
+              <p class="text-sm">Task Assigned</p>
+              <h3 class="text-2xl font-bold">05</h3>
+            </div>
+          </div>
+        </div>
+        <!-- FIRST ROW END -->
+
+        <!-- SECOND ROW START -->
+        <div class="grid grid-cols-3 grid-rows-2 mt-6 gap-4">
+          <!-- cards 1 -->
+          <div class="bg-primary col-span-1 p-4 rounded-xl space-y-5">
+            <div class="top-badge px-4 py-2 rounded-md bg-white inline-block">
+              <p class="text-base">ShopEase</p>
+            </div>
+            <h2 class="text-xl">Fix Mobile Button Issue</h2>
+            <div class="p-4 rounded-md bg-white">
+              <p class="text-sm">
+                Debug using Chrome DevTools, check for overlapping elements...
+              </p>
+            </div>
+            <div class="flex gap-4 justify-between">
+              <div class="text-sm">
+                <p>Deadline</p>
+                <p>21 March 2025</p>
+              </div>
+              <button
+                id="card-btn-0"
+                class="card-button px-6 py-2 bg-accent text-white rounded-md"
+              >
+                Completed
+              </button>
+            </div>
+          </div>
+          <!-- cards 1 end -->
+          <!-- cards 2 -->
+          <div class="bg-primary col-span-1 p-4 rounded-xl space-y-5">
+            <div class="top-badge px-4 py-2 rounded-md bg-white inline-block">
+              <p class="text-base">ShopEase</p>
+            </div>
+            <h2 class="text-xl">Fix Mobile Button Issue</h2>
+            <div class="p-4 rounded-md bg-white">
+              <p class="text-sm">
+                Debug using Chrome DevTools, check for overlapping elements...
+              </p>
+            </div>
+            <div class="flex gap-4 justify-between">
+              <div class="text-sm">
+                <p>Deadline</p>
+                <p>21 March 2025</p>
+              </div>
+              <button
+                id="card-btn-1"
+                class="card-button px-6 py-2 bg-accent text-white rounded-md"
+              >
+                Completed
+              </button>
+            </div>
+          </div>
+          <!-- cards 2 end -->
+          <!-- cards 3 -->
+          <div class="bg-primary col-span-1 p-4 rounded-xl space-y-5">
+            <div class="top-badge px-4 py-2 rounded-md bg-white inline-block">
+              <p class="text-base">ShopEase</p>
+            </div>
+            <h2 class="text-xl">Fix Mobile Button Issue</h2>
+            <div class="p-4 rounded-md bg-white">
+              <p class="text-sm">
+                Debug using Chrome DevTools, check for overlapping elements...
+              </p>
+            </div>
+            <div class="flex gap-4 justify-between">
+              <div class="text-sm">
+                <p>Deadline</p>
+                <p>21 March 2025</p>
+              </div>
+              <button
+                id="card-btn-2"
+                class="card-button px-6 py-2 bg-accent text-white rounded-md"
+              >
+                Completed
+              </button>
+            </div>
+          </div>
+          <!-- cards 3 end -->
+          <!-- cards 4 -->
+          <div class="bg-primary col-span-1 p-4 rounded-xl space-y-5">
+            <div class="top-badge px-4 py-2 rounded-md bg-white inline-block">
+              <p class="text-base">ShopEase</p>
+            </div>
+            <h2 class="text-xl">Fix Mobile Button Issue</h2>
+            <div class="p-4 rounded-md bg-white">
+              <p class="text-sm">
+                Debug using Chrome DevTools, check for overlapping elements...
+              </p>
+            </div>
+            <div class="flex gap-4 justify-between">
+              <div class="text-sm">
+                <p>Deadline</p>
+                <p>21 March 2025</p>
+              </div>
+              <button
+                id="card-btn-3"
+                class="card-button px-6 py-2 bg-accent text-white rounded-md"
+              >
+                Completed
+              </button>
+            </div>
+          </div>
+          <!-- cards 4 end -->
+          <!-- cards 5 -->
+          <div class="bg-primary col-span-1 p-4 rounded-xl space-y-5">
+            <div class="top-badge px-4 py-2 rounded-md bg-white inline-block">
+              <p class="text-base">ShopEase</p>
+            </div>
+            <h2 class="text-xl">Fix Mobile Button Issue</h2>
+            <div class="p-4 rounded-md bg-white">
+              <p class="text-sm">
+                Debug using Chrome DevTools, check for overlapping elements...
+              </p>
+            </div>
+            <div class="flex gap-4 justify-between">
+              <div class="text-sm">
+                <p>Deadline</p>
+                <p>21 March 2025</p>
+              </div>
+              <button
+                id="card-btn-4"
+                class="card-button px-6 py-2 bg-accent text-white rounded-md"
+              >
+                Completed
+              </button>
+            </div>
+          </div>
+          <!-- cards 5 end -->
+          <!-- cards 6 -->
+          <div class="bg-primary col-span-1 p-4 rounded-xl space-y-5">
+            <div class="top-badge px-4 py-2 rounded-md bg-white inline-block">
+              <p class="text-base">ShopEase</p>
+            </div>
+            <h2 class="text-xl">Fix Mobile Button Issue</h2>
+            <div class="p-4 rounded-md bg-white">
+              <p class="text-sm">
+                Debug using Chrome DevTools, check for overlapping elements...
+              </p>
+            </div>
+            <div class="flex gap-4 justify-between">
+              <div class="text-sm">
+                <p>Deadline</p>
+                <p>21 March 2025</p>
+              </div>
+              <button
+                id="card-btn-5"
+                class="card-button px-6 py-2 bg-accent text-white rounded-md"
+              >
+                Completed
+              </button>
+            </div>
+          </div>
+          <!-- cards 6 end -->
+        </div>
+        <!-- SECOND ROW END -->
+      </div>
+      <!-- LEFT SIDE END -->
+      <div
+        class="main-body-right bg-white rounded-xl col-span-2 p-4 flex flex-col items-center gap-3"
+      >
+        <div class="flex items-center gap-2">
+          <img src="assets/activity.png" alt="" />
+          <h3 class="text-xl">Activity Log</h3>
+        </div>
+        <button class="px-4 py-2 bg-accent rounded-lg text-white">
+          Clear History
+        </button>
+      </div>
+    </section>
+    <!-- MAIN BODY END -->
+    <script src="script.js"></script>
+  </body>
+</html>
