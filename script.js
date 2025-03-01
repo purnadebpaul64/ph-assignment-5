@@ -19,9 +19,24 @@ for (let i = 0; i < buttons.length; i++) {
     let y = document.getElementById(`card-btn-${i}`);
     y.setAttribute("disabled", true);
     y.classList.add("opacity-40");
+    let z = document.getElementById(`card-heading-${i}`);
+    commentpush(z.innerText);
   };
 }
 
 const time = new Date().toDateString();
-console.log(time);
 document.getElementById("date-place").innerText = time;
+
+function commentpush(text) {
+  const comments = document.getElementById("comment");
+  comments.innerHTML += `
+  <div class="p-2 bg-primary rounded-lg text-sm mb-3">
+            <p>You have Complete The Task ${text} at ${new Date().getHours()}:${new Date().getMinutes()}:${new Date().getSeconds()} PM</p>
+          </div>
+          `;
+}
+
+document.getElementById("clear-history").addEventListener("click", function () {
+  const comments = document.getElementById("comment");
+  comments.innerHTML = ``;
+});
