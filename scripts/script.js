@@ -1,8 +1,8 @@
+// ===== BUTTON CLICK TASK DSC AND COMPLETE TASK INC SECTION ===== //
+
 let inttask = 6;
 let completetask = 23;
-
 document.getElementById("completed-task").innerText = completetask;
-
 document.getElementById("task-assigned").innerText = inttask;
 function dsctask() {
   --inttask;
@@ -11,10 +11,12 @@ function dsctask() {
   document.getElementById("completed-task").innerText = completetask;
 }
 
+// ===== MAIN FUNCION ===== //
+
 let buttons = document.getElementsByClassName("card-button");
 for (let i = 0; i < buttons.length; i++) {
   buttons[i].onclick = function () {
-    alert("You clicked Button");
+    alert("Board Updated Successfully");
     dsctask();
     let y = document.getElementById(`card-btn-${i}`);
     y.setAttribute("disabled", true);
@@ -22,22 +24,31 @@ for (let i = 0; i < buttons.length; i++) {
     let z = document.getElementById(`card-heading-${i}`);
     commentpush(z.innerText);
     if (inttask == 0) {
-      alert("congo motha fhata");
+      alert("Congrates!!! You have completed all the current task");
     }
   };
 }
+
+// ===== TIME AND RIGHT BAR TASK COMPLETE MSG SECTION ===== //
 
 const time = new Date().toDateString();
 document.getElementById("date-place").innerText = time;
 
 function commentpush(text) {
+  let hours = new Date().getHours();
+  let minutes = new Date().getMinutes();
+  let seconds = new Date().getSeconds();
   const comments = document.getElementById("comment");
   comments.innerHTML += `
   <div class="p-2 bg-primary rounded-lg text-sm mb-3">
-            <p>You have Complete The Task ${text} at ${new Date().getHours()}:${new Date().getMinutes()}:${new Date().getSeconds()} PM</p>
+            <p>You have Complete The Task ${text} at ${hours}:${minutes}:${seconds} ${
+    hours >= 12 ? "PM" : "AM"
+  }</p>
           </div>
           `;
 }
+
+// ====== RANDOM COLORS SECTION ======= //
 
 document.getElementById("clear-history").addEventListener("click", function () {
   const comments = document.getElementById("comment");
@@ -45,13 +56,19 @@ document.getElementById("clear-history").addEventListener("click", function () {
 });
 
 function colorChange() {
-  let red = Math.floor(Math.random() * 256);
-  let green = Math.floor(Math.random() * 256);
-  let blue = Math.floor(Math.random() * 256);
-  let alpha = Math.random().toFixed(2); // Alpha 0.00 to 1.00
+  let red = Math.floor(Math.random() * 255);
+  let green = Math.floor(Math.random() * 255);
+  let blue = Math.floor(Math.random() * 255);
+  let alpha = Math.random().toFixed(2);
 
   let rgba = `rgba(${red}, ${green}, ${blue}, ${alpha})`;
   let body = document.getElementById("body");
   body.classList.remove("bg-primary");
   body.style.background = rgba;
 }
+
+// ===== BLOG PAGE ===== //
+
+document.getElementById("redirectblog").addEventListener("click", function () {
+  window.location.href = "./blog.html";
+});

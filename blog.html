@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- tailwind cdn -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              accent: "#3752fd",
+              primary: "#f4f7ff",
+              secondary: "#ced6ff",
+              dark: "#00303c",
+            },
+            fontFamily: {
+              poppins: ["Poppins", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+    <!-- fontawesome -->
+    <script
+      src="https://kit.fontawesome.com/fc3ff6af56.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Blog</title>
+  </head>
+  <body class="font-poppins bg-primary">
+    <!-- HEADER START -->
+    <nav class="max-w-screen-xl mx-auto my-5">
+      <div class="bg-white p-5 rounded-xl flex justify-between items-center">
+        <div class="left-section flex gap-2 items-center">
+          <img src="assets/logo.png" alt="" />
+          <h1 class="font-bold text-3xl">
+            <span class="font-light">Dev</span>Board
+          </h1>
+        </div>
+        <div class="right-section">
+          <button
+            id="backToDesk"
+            class="px-6 py-2 bg-accent text-white rounded-md"
+          >
+            Back To Desk
+          </button>
+        </div>
+      </div>
+    </nav>
+    <!-- HEADER END -->
+    <!-- MAIN BODY START -->
+    <section class="max-w-screen-xl mx-auto">
+      <div class="my-6">
+        <h2 class="text-xl font-bold text-center">Blogs</h2>
+      </div>
+      <!-- BLOGS CARD 1 -->
+      <div class="bg-white rounded-lg mb-6">
+        <div class="p-4">
+          <h2 class="text-lg font-semibold">
+            Question-1: What are the different ways to select an element in the
+            DOM?
+          </h2>
+        </div>
+        <div class="border-[1.5px] border-dashed"></div>
+        <div class="p-4">
+          <p>
+            There are few ways to select an element in the dom some of them are
+            getElementById(), getElementsByClassName(),getElementsByTagName(),
+            querySelector() etc.
+          </p>
+        </div>
+      </div>
+      <!-- BLOGS CARD 2 -->
+      <div class="bg-white rounded-lg mb-6">
+        <div class="p-4">
+          <h2 class="text-lg font-semibold">
+            Question-2: What is the difference between innerHTML, innerText, and
+            textContent ?
+          </h2>
+        </div>
+        <div class="border-[1.5px] border-dashed"></div>
+        <div class="p-4">
+          <p>
+            innerHTML returns or sets the HTML code + Text inside the element on
+            the other hand innerText Returns or sets the only text inside the
+            element and textContent returns or sets the Full Text with hidden
+            text inside the element
+          </p>
+        </div>
+      </div>
+      <!-- BLOGS CARD 3 -->
+      <div class="bg-white rounded-lg mb-6">
+        <div class="p-4">
+          <h2 class="text-lg font-semibold">
+            Question-3: What is event delegation in the DOM?
+          </h2>
+        </div>
+        <div class="border-[1.5px] border-dashed"></div>
+        <div class="p-4">
+          <p>
+            Event delegation is a way which allows the parent to listen to
+            events triggered by its child elements using Event Bubbling
+          </p>
+        </div>
+      </div>
+      <!-- BLOGS CARD 4 -->
+      <div class="bg-white rounded-lg mb-6">
+        <div class="p-4">
+          <h2 class="text-lg font-semibold">
+            Question-4: What is event bubbling in the DOM?
+          </h2>
+        </div>
+        <div class="border-[1.5px] border-dashed"></div>
+        <div class="p-4">
+          <p>
+            Event Bubbling is a concept where an event starts from the target
+            element(child) and travels upward to its parent elements in the DOM
+            hierarchy.
+          </p>
+        </div>
+      </div>
+      <!-- BLOGS CARD 5 -->
+      <div class="bg-white rounded-lg mb-6">
+        <div class="p-4">
+          <h2 class="text-lg font-semibold">
+            Question-5: How do you create, add, and remove elements using
+            JavaScript?
+          </h2>
+        </div>
+        <div class="border-[1.5px] border-dashed"></div>
+        <div class="p-4">
+          <p>
+            We can create an element using document.createElement("tagName") and
+            we can add elements in dom by using appendChild(), innerHTML,
+            append() etc and we can remove an element by using remove() or
+            removeChild()
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- MAIN BODY END -->
+    <script src="./scripts/backhome.js"></script>
+  </body>
+</html>
